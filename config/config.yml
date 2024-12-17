@@ -1,0 +1,12 @@
+# F1 Parser Configuration
+
+# API Settings
+api:
+  base_url: "https://www.formula1.com"
+  endpoints:
+    drivers: "/en/drivers"
+  request_delay: 2  # Delay between requests in seconds
+  timeout: 30  # Request timeout in seconds
+  max_retries: 3
+  headers:
+    User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
