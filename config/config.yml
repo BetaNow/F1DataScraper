@@ -4,7 +4,7 @@
 api:
   base_url: "https://www.formula1.com"
   endpoints:
-    drivers: "/en/drivers"
+    standings: "/en/results/{year}/drivers"
   request_delay: 2  # Delay between requests in seconds
   timeout: 30  # Request timeout in seconds
   max_retries: 3

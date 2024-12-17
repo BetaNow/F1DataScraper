@@ -32,6 +32,17 @@ class F1ParserCLI:
         :return: None
         """
         self.console.print(Panel.fit("Welcome to F1 Data Parser!", title="Welcome", border_style="green"))
+        self.console.print("Configuration loaded successfully!")
+        self.console.print(f"API URL: {self.config['api']['base_url']}")
+
+        self.console.print("1. Standings")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            from src.parsers.standing_parser import StandingParser
+            parser = StandingParser(self.config)
+            parser.parse(int(input("Enter the year: ")))
+
 
 
 if __name__ == "__main__":
